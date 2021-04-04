@@ -1,0 +1,6 @@
+.pointy:hover{
+    cursor: pointer;
+}
+.pointy.active{
+    background: 1164A3 !important;
+}

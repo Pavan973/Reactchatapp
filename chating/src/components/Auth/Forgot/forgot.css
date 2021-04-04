@@ -1,4 +1,11 @@
 .send{
     padding-left: 100px;
     padding-right: 10px;
+   width: 450px;
+}
+.cancel{
+    width: 450px;
+}
+.sides{
+    background-color: orangered
 }

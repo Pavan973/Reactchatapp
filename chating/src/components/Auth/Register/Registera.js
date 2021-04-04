@@ -1,7 +1,8 @@
 import React,{useState}from 'react';
 import { Button,Form,Grid,Segment,Message} from 'semantic-ui-react'
 import firebase from "../../../server/firease";
-
+import {Sidebar} from "semantic-ui-react"
+import "./Registera.css"
 
 const Registera = () => {
     let user={
@@ -105,6 +106,7 @@ const formatErrors = () =>{
 }
     return (
         <>
+        <Sidebar vertical visible width="very thin" className="sides"></Sidebar>
         <Grid verticalAlign="middle" textAlign="center" style={{margin:"100px"}}>
          <Grid.Column style={{maxWidth:"500px"}}>
          <h1>Register</h1>
@@ -148,7 +150,7 @@ const formatErrors = () =>{
                       placeholder="Password"
                      />
 
-              <Button content='Register' secondary  disabled={isLoading} loading={isLoading}/>
+              <Button content='Register' secondary  disabled={isLoading} loading={isLoading} size="large" className="register"/>
                  </Segment>
              </Form>
 

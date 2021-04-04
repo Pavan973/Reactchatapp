@@ -1,7 +1,10 @@
 import React,{useState}from 'react';
-import { Button,Form,Grid,Segment,Message,Icon} from 'semantic-ui-react'
+import { Button,Form,Grid,Segment,Message} from 'semantic-ui-react'
+import Logingo from "../logingo"
 import firebase from "../../../server/firease";
 import {Link} from "react-router-dom"
+import {Sidebar} from "semantic-ui-react"
+import "./side.css"
 
 const Login = () => {
     let user={
@@ -59,20 +62,10 @@ const Login = () => {
 
     return (
         <>
-      <Grid verticalAlign="middle" textAlign="center" style={{margin:"100px"}}>
-         <Grid.Column style={{maxWidth:"500px"}}>
-         
-        <Button color='facebook' style={{margin:"10px"}}>
-      <Icon name='facebook' /> Facebook
-    </Button>
-
-
-    <Button color='google plus' style={{margin:"10px"}}>
-      <Icon name='google plus' /> Google Plus
-    </Button>
-    <Button color='linkedin' style={{margin:"10px"}}>
-      <Icon name='linkedin' /> LinkedIn
-    </Button><br/><br></br>
+      <Sidebar vertical visible width="very thin" className="sides"></Sidebar>
+      <Grid verticalAlign="middle" textAlign="center" style={{margin:"50px"}}>
+         <Grid.Column style={{maxWidth:"500px"}}>   
+           <Logingo />
              <Form onSubmit={onSubmit}>
                  <Segment stacked>
                  
@@ -96,7 +89,7 @@ const Login = () => {
                       type="password"
                       placeholder="password"
                      />
-              <Button content='Login' secondary  disabled={isLoading} loading={isLoading}/><br></br>
+              <Button content='Login' secondary  disabled={isLoading} loading={isLoading} className="login"/><br></br>
              
                  
                  </Segment> <h5> Don't have an account?</h5>

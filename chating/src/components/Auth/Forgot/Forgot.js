@@ -1,11 +1,13 @@
 import React from 'react';
 import { Button,Form,Grid,Segment} from 'semantic-ui-react'
 import "../Forgot/forgot.css"
+import {Sidebar} from "semantic-ui-react"
 const Forgot = () => {
     
     return (
         <>
-        <Grid verticalAlign="middle" textAlign="center" style={{margin:"100px"}}>
+        <Sidebar vertical visible width="very thin" className="sides"></Sidebar>
+        <Grid verticalAlign="middle" textAlign="center" style={{marginTop:"50px"}}>
          <Grid.Column style={{maxWidth:"500px"}}>
             <Form >
                  <Segment stacked>
@@ -22,9 +24,9 @@ const Forgot = () => {
                       placeholder="enter email address"
                      />
                      
-              <Button content='SEND' secondary  className="send"/>
+              <Button content='SEND' secondary  className="send"/><br></br><br></br>
              
-              <Button color='red'>CANCEL</Button>
+              <Button color='red' className="cancel">CANCEL</Button>
                  </Segment> 
           
               
